@@ -8,6 +8,7 @@
 //#include "display.h"
 //#include "shape.h"
 using namespace std;
+
 int main() {
 	//Display* w1 = new GraphicalDisplay();
 	//Display* w2 = new TextDisplay();
