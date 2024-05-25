@@ -1,20 +1,40 @@
-﻿// Drawing-library.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
-
-#include <iostream>
-
-int main()
-{
-    std::cout << "Hello World!\n";
+﻿#include <iostream>
+//#include "graphicalDisplay.h"
+//#include "textDisplay.h"
+//#include "circle.h"
+//#include "triangle.h"
+//#include "parallelogram.h"
+//#include "complexShape.h"
+//#include "display.h"
+//#include "shape.h"
+using namespace std;
+int main() {
+	//Display* w1 = new GraphicalDisplay();
+	//Display* w2 = new TextDisplay();
+	//Shape* o1 = new Triangle(w1, 3, 2, 2, -2);
+	//Shape* o2 = new Parallelogram(w1, 3, 2, 2, -2);
+	//Shape* o3 = new Circle(w1, 5);
+	//ComplexShape* o4 = new ComplexShape(w1);
+	//o4->add(o1);
+	//o4->add(o2);
+	//o4->add(o3);
+	//o4->draw();
+	//o1->draw();
+	//o2->draw();
+	//o3->draw();
+	//o1->changeDisplay(w2);
+	//o2->changeDisplay(w2);
+	//o3->changeDisplay(w2);
+	//o4->changeDisplay(w2);
+	//o4->draw();
+	//o1->draw();
+	//o2->draw();
+	//o3->draw();
+	//delete o1;
+	//delete o2;
+	//delete o3;
+	//delete o4;
+	//delete w2;
+	//delete w1;
+	return 0;
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
