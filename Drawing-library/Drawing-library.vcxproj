@@ -127,10 +127,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="circle.cpp" />
+    <ClCompile Include="complexShape.cpp" />
+    <ClCompile Include="display.cpp" />
     <ClCompile Include="Drawing-library.cpp" />
+    <ClCompile Include="graphicalDisplay.cpp" />
+    <ClCompile Include="myExceptions.cpp" />
+    <ClCompile Include="parallelogram.cpp" />
+    <ClCompile Include="shape.cpp" />
+    <ClCompile Include="textDisplay.cpp" />
+    <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="circle.h" />
+    <ClInclude Include="complexShape.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="graphicalDisplay.h" />
+    <ClInclude Include="myExceptions.h" />
+    <ClInclude Include="parallelogram.h" />
+    <ClInclude Include="shape.h" />
+    <ClInclude Include="textDisplay.h" />
+    <ClInclude Include="triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
