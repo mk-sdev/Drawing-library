@@ -2,27 +2,21 @@
 #include <iostream>
 
 void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
-    //if (a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0) {
+    //if (a1 < 0 || a2 < 0 || b1 < 0 || b2 > 0) {
     //    throw MyExceptions("Nieprawidlowe wartosci parametrow");
     //}
 
-    int width = a1;
-    int height = a2 > -b2 ? a2 : -b2;
+    float leftCoeff1 = float(a2) / a1;
+    float leftCoeff2 = float(b2) / b1;
 
-    for (int y = height; y >= -height; --y) {
-        for (int x = 0; x <= width; ++x) {
-            if ((x == 0 && y == 0) ||
-                (x == a1 && y == a2) ||
-                (x == b1 && y == b2) ||
-                ((a2 != 0 && y == x * a2 / a1) && x <= a1) ||
-                ((b2 != 0 && y == x * b2 / b1) && x <= b1) ||
-                ((a1 != 0 && y == (x - a1) * b2 / b1 + a2) && x >= a1 && x <= width)) {
-                std::cout << 't';
-            }
-            else {
-                std::cout << ' ';
-            }
-        }
+    float rightCoeffA = (float(a2) - b2) / (a1 - b1);
+    float rightCoeffB = a2 - a1 * rightCoeffA;
+    for (int y = a2; y >= b2; y--)
+    {
+        int leftBound = y > 0? std::ceil(y / leftCoeff1) : std::ceil(y / leftCoeff2);
+        int rightBound = std::floor((y - rightCoeffB) / rightCoeffA);
+        for (int x = 0; x < leftBound; x++) std::cout << ' ';
+        for (int x = leftBound; x <= rightBound; x++) std::cout << 't';
         std::cout << '\n';
     }
 }
@@ -52,26 +46,19 @@ void GraphicalDisplay::drawParallelogram(int a1, int a2, int b1, int b2) {
     //if (a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0) {
     //    throw MyExceptions("Nieprawidlowe wartosci parametrow");
     //}
+    
+    float coeffA = float(a2) / a1;
+    float coeffB = float(b2) / b1;
 
-    int width = a1 + b1;
-    int height = a2 > -b2 ? a2 : -b2;
+    float aPrimeShift = b2 - coeffA * b1;
+    float bPrimeShift = a2 - coeffB * a1;
 
-    for (int y = height; y >= -height; --y) {
-        int leadingSpaces = y > 0 ? height - y : -y;
-
-        for (int i = 0; i < leadingSpaces; ++i) {
-            std::cout << ' ';
-        }
-
-        for (int x = 0; x <= width; ++x) {
-            if ((y <= x * a2 / a1 && y >= x * b2 / b1 && x <= a1) ||
-                (y <= (x - b1) * a2 / a1 + b2 && y >= (x - a1) * b2 / b1 + a2 && x > b1)) {
-                std::cout << 'p';
-            }
-            else {
-                std::cout << ' ';
-            }
-        }
+    for (int y = a2; y >= b2; y--)
+    {
+        int leftBound = y > 0 ? std::ceil(y / coeffA) : std::ceil(y / coeffB);
+        int rightBound = y > a2 + b2 ? std::floor((y - bPrimeShift) / coeffB) : std::floor((y - aPrimeShift) / coeffA);
+        for (int x = 0; x < leftBound; x++) std::cout << ' ';
+        for (int x = leftBound; x <= rightBound; x++) std::cout << 'p';
         std::cout << '\n';
     }
 }
