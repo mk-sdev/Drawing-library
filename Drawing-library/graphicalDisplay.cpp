@@ -1,10 +1,11 @@
 #include "graphicalDisplay.h"
 #include <iostream>
+#include "myExceptions.h"
 
 void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
-    //if (a1 < 0 || a2 < 0 || b1 < 0 || b2 > 0) {
-    //    throw MyExceptions("Nieprawidlowe wartosci parametrow");
-    //}
+    if (a1 < 0 || a2 < 0 || b1 < 0 || b2 > 0) {
+        throw MyExceptions("Nieprawidlowe wartosci parametrow");
+    }
 
     float leftCoeff1 = float(a2) / a1;
     float leftCoeff2 = float(b2) / b1;
@@ -22,9 +23,9 @@ void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
 }
 
 void GraphicalDisplay::drawCircle(int r) {
-    //if (r <= 0) {
-        //throw MyExceptions("Promien busi byc liczba dodatnia.");
-    //}
+    if (r <= 0) {
+        throw MyExceptions("Promien busi byc liczba dodatnia.");
+    }
 
     int diameter = 2 * r;
     for (int y = 0; y <= diameter; ++y) {
@@ -43,9 +44,9 @@ void GraphicalDisplay::drawCircle(int r) {
 }
 
 void GraphicalDisplay::drawParallelogram(int a1, int a2, int b1, int b2) {
-    //if (a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0) {
-    //    throw MyExceptions("Nieprawidlowe wartosci parametrow");
-    //}
+    if (a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0) {
+        throw MyExceptions("Nieprawidlowe wartosci parametrow");
+    }
     
     float coeffA = float(a2) / a1;
     float coeffB = float(b2) / b1;
