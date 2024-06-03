@@ -8,5 +8,7 @@ Parallelogram::Parallelogram(Display* w, int a1, int a2, int b1, int b2) : Shape
 }
 
 void Parallelogram::draw() {
+    if (display == nullptr)
+        throw MyExceptions("Nie mozna narysowac rownolegloboka -- brak display.\n");
     display->drawParallelogram(a1, a2, b1, b2);
 }

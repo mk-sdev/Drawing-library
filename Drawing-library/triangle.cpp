@@ -8,5 +8,7 @@ Triangle::Triangle(Display* w, int a1, int a2, int b1, int b2) : Shape(w), a1(a1
 }
 
 void Triangle::draw() {
+    if (display == nullptr)
+        throw MyExceptions("Nie mozna narysowac trojkata -- brak display.\n");
     display->drawTriangle(a1, a2, b1, b2);
 }
