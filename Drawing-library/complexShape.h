@@ -28,8 +28,9 @@ public:
     void draw() override;
 
 private:
-    std::vector<Shape*> shapes; // wektor ksztaltow skladajacych sie na zlozony ksztalt
+
     static const int MAX_SHAPES = 5; // maksymalna liczba ksztaltow
+    Shape* shapes[MAX_SHAPES] = {}; // tablica ksztaltow skladajacych sie na zlozony ksztalt
 };
 
 #endif // COMPLEXSHAPE_H

@@ -7,15 +7,22 @@ bool ComplexShape::add(Shape* o) {
     if (o == nullptr)
         throw MyExceptions("Nieprawidlowy argument.\n");
 
-    if (shapes.size() < MAX_SHAPES) {
-        shapes.push_back(o);
-        return true;
+    for (int i = 0; i < MAX_SHAPES; i++)
+    {
+        if (shapes[i] == nullptr) {
+            shapes[i] = o;
+            return true;
+        }    
     }
+
     return false;
 }
 
 void ComplexShape::draw() {
-    for (Shape* shape : shapes) {
-        shape->draw();
+    for (int i = 0; i < MAX_SHAPES; i++)
+    {
+        if (shapes[i] == nullptr)
+            return;
+        shapes[i]->draw();
     }
 }
