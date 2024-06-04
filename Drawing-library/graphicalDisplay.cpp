@@ -3,7 +3,7 @@
 #include "myExceptions.h"
 
 void GraphicalDisplay::drawTriangle(int a1, int a2, int b1, int b2) {
-    if (a1 < 0 || a2 < 0 || b1 < 0 || b2 > 0) {
+    if (a1 <= 0 || a2 <= 0 || b1 <= 0 || b2 >= 0) {
         throw MyExceptions("Nieprawidlowe wartosci parametrow");
     }
 

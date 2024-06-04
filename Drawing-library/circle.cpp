@@ -8,5 +8,7 @@ Circle::Circle(Display* w, int r) : Shape(w), radius(r) {
 }
 
 void Circle::draw() {
+    if (display == nullptr)
+        throw MyExceptions("Nie mozna narysowac okrega -- display is nullptr.\n");
     display->drawCircle(radius);
 }

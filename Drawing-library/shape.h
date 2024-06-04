@@ -28,7 +28,7 @@ public:
     virtual ~Shape(); // domyslny destruktor
 
 protected:
-    Display* display; // wskaznik na obiekt klasy Display
+    Display* display = nullptr; // wskaznik na obiekt klasy Display
 };
 
 #endif // SHAPE_H
