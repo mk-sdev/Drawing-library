@@ -18,7 +18,7 @@ void TextDisplay::drawCircle(int r)
 	if (r <= 0) {
 		throw MyExceptions("Promien busi byc liczba dodatnia.");
 	}
-	std::cout << std::format("Rysowanie o promieniu {}.\n", r);
+	std::cout << std::format("Rysowanie kola o promieniu {}.\n", r);
 }
 
 void TextDisplay::drawParallelogram(int a1, int a2, int b1, int b2)
