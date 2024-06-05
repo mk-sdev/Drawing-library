@@ -18,9 +18,6 @@
     <ClCompile Include="Drawing-library.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="display.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="textDisplay.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
