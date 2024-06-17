@@ -131,7 +131,7 @@
   <ItemGroup>
     <ClCompile Include="circle.cpp" />
     <ClCompile Include="complexShape.cpp" />
-    <ClCompile Include="Drawing-library.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="graphicalDisplay.cpp" />
     <ClCompile Include="myExceptions.cpp" />
     <ClCompile Include="parallelogram.cpp" />
