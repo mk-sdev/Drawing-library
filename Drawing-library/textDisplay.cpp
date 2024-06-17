@@ -2,7 +2,6 @@
 #include <iostream>
 #include <format>
 #include <string>
-#include <string_view>
 #include "myExceptions.h"
 
 void TextDisplay::drawTriangle(int a1, int a2, int b1, int b2)
